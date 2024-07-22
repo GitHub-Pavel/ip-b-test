@@ -1,0 +1,43 @@
+version: '3.1'
+
+services:
+
+  wordpress:
+    image: wordpress
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: ${DATABASE_USER}
+      WORDPRESS_DB_PASSWORD: ${DATABASE_PASS}
+      WORDPRESS_DB_NAME: ${DATABASE_NAME}
+    volumes:
+      - wordpress:/var/www/html
+      - ./todos:/var/www/html/wp-content/plugins/todos
+
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: ${DATABASE_NAME}
+      MYSQL_USER: ${DATABASE_USER}
+      MYSQL_PASSWORD: ${DATABASE_PASS}
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'
+    volumes:
+      - db:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8081:80
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_USER=${DATABASE_USER}
+      - PMA_PASSWORD=${DATABASE_PASS}
+
+volumes:
+  wordpress:
+  db:
+  phpmyadmin:

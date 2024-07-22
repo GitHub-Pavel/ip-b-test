@@ -1,0 +1,30 @@
+{
+  "name": "ip-b-test",
+  "version": "1.0",
+  "private": true,
+  "scripts": {
+    "dev": "parcel watch src/app/admin.app.ts src/styles/front.style.scss src/styles/admin.style.scss --dist-dir todos/assets",
+    "build": "parcel build src/app/admin.app.ts src/styles/front.style.scss src/styles/admin.style.scss --dist-dir todos/assets && composer install"
+  },
+  "author": "Pavel K.",
+  "license": "MIT",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.12.0",
+    "@types/lodash": "^4.17.7",
+    "@types/toastify-js": "^1.12.3",
+    "buffer": "^6.0.3",
+    "parcel": "^2.12.0",
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-at-alias": "^0.15.0",
+    "typescript": "^5.5.3"
+  },
+  "alias": {
+    "@app/": "./src/app/"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "lodash": "^4.17.21",
+    "query-string": "^9.0.0",
+    "toastify-js": "^1.12.0"
+  }
+}

@@ -1,0 +1,1 @@
+export { ADMIN_AJAX_URL } from './server.ts'

@@ -1,0 +1,16 @@
+{
+    "name": "pavel/todos",
+    "type": "todos",
+    "authors": [
+        {
+            "name": "Pavel Khatkevich",
+            "email": "pavel.khatkevich2000@gmail.com"
+        }
+    ],
+    "config": {
+        "vendor-dir": "todos/vendor"
+    },
+    "require": {
+        "psr/log": "^3.0"
+    }
+}
