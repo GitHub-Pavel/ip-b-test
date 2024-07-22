@@ -15,6 +15,7 @@ services:
     volumes:
       - wordpress:/var/www/html
       - ./todos:/var/www/html/wp-content/plugins/todos
+      - ./themes:/var/www/html/wp-content/themes
 
   db:
     image: mysql:8.0
