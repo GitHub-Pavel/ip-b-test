@@ -3,8 +3,8 @@
   "version": "1.0",
   "private": true,
   "scripts": {
-    "dev": "parcel watch src/app/admin.app.ts src/styles/front.style.scss src/styles/admin.style.scss --dist-dir todos/assets",
-    "build": "parcel build src/app/admin.app.ts src/styles/front.style.scss src/styles/admin.style.scss --dist-dir todos/assets && composer install"
+    "dev": "composer install && parcel watch src/app/admin.app.ts src/styles/front.style.scss src/styles/admin.style.scss --dist-dir todos/assets",
+    "build": "composer install && parcel build src/app/admin.app.ts src/styles/front.style.scss src/styles/admin.style.scss --dist-dir todos/assets"
   },
   "author": "Pavel K.",
   "license": "MIT",
